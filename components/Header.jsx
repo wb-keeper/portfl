@@ -1,7 +1,11 @@
+import ThemeToggler from "@/components/ThemeToggler";
+
 function Header(props) {
-    return (
-        <div>Header</div>
-    );
+  return (
+    <header>
+      <ThemeToggler />
+    </header>
+  );
 }
 
 export default Header;
