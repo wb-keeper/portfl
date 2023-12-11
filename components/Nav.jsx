@@ -1,5 +1,5 @@
-function Nav(props) {
-  return <div>Nav</div>;
+function Nav({ containerStyles, linkStyles, underlineStyles }) {
+  return <div className={`${containerStyles}`}>Nav</div>;
 }
 
 export default Nav;

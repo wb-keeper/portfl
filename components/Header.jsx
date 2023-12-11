@@ -2,6 +2,8 @@
 import ThemeToggler from "@/components/ThemeToggler";
 import Template from "@/app/template";
 import Logo from "@/components/Logo";
+import Nav from "@/components/Nav";
+import MobileNav from "@/components/MobileNav";
 
 function Header(props) {
   return (
@@ -9,8 +11,12 @@ function Header(props) {
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Logo />
-          <div>
+          <div className="flex items-center gap-x-6">
+            <Nav />
             <ThemeToggler />
+            <div className="xl:hidden ">
+              <MobileNav />
+            </div>
           </div>
         </div>
       </div>
