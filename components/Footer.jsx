@@ -1,7 +1,5 @@
 function Footer(props) {
-    return (
-        <div>Footer</div>
-    );
+  return <footer className="">Footer</footer>;
 }
 
 export default Footer;
