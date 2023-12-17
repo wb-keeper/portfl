@@ -9,8 +9,9 @@ function ThemeToggler() {
   return (
     <div>
       <Button
+        variant="outline"
+        size="icon"
         onClick={() => {
-          console.log(123);
           setTheme(theme === "dark" ? "light" : "dark");
         }}
       >
