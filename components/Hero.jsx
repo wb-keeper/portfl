@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Download, Send } from "lucide-react";
 import Socials from "@/components/Socials";
+import DevImg from "@/components/DevImg";
+import Badge from "@/components/Badge";
 
 function Hero(props) {
   return (
@@ -31,9 +33,19 @@ function Hero(props) {
                 </Button>
               </Link>
             </div>
-            <Socials />
+            <Socials
+              containerStyles="flex gap-x-6 mx-auto xl:mx-0"
+              iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
+            />
           </div>
-          <div className="hidden xl:flex relative">image</div>
+          <div className="hidden xl:flex relative">
+            <Badge />
+            <div className="bg-hero_shape2_light dark:bg_hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
+            <DevImg
+              containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
+              imgSrc="/assets/hero/developer.png"
+            />
+          </div>
         </div>
         <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
           <RiArrowDownSLine className="text-3xl text-primary" />
