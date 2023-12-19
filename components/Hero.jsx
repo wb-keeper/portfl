@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
-import { RiBriefcase4Fill, RiTeamFill, RiArrowDownSLine } from "react-icons/ri";
+import {
+  RiBriefcase4Fill,
+  RiTeamFill,
+  RiArrowDownSLine,
+  RiTodoFill,
+} from "react-icons/ri";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Download, Send } from "lucide-react";
@@ -39,7 +44,26 @@ function Hero(props) {
             />
           </div>
           <div className="hidden xl:flex relative">
-            <Badge icon={<RiBriefcase4Fill />} />
+            <Badge
+              containerStyles="absolute top-[24%] -left-[5rem]"
+              icon={<RiBriefcase4Fill />}
+              endCountNum={3}
+              badgeText="Years Of Experience"
+            />
+            <Badge
+              containerStyles="absolute top-[80%] -left-[1rem]"
+              icon={<RiTodoFill />}
+              endCountNum={6}
+              endCountText="k"
+              badgeText="Finished Pojects"
+            />
+            <Badge
+              containerStyles="absolute top-[55%] -right-8"
+              icon={<RiTeamFill />}
+              endCountNum={9}
+              endCountText="k"
+              badgeText="Happy Clients"
+            />
             <div className="bg-hero_shape2_light dark:bg_hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
             <DevImg
               containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
