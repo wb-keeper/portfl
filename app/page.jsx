@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Hero from "@/components/Hero";
-// 1 05
+import About from "@/components/About";
+// 1 31
 export default function Home() {
   return (
     <main>
       <Hero />
+      <About />
     </main>
   );
 }
