@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import DevImg from "@/components/DevImg";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const infoData = [
   {
@@ -124,9 +125,28 @@ function About() {
         <h2 className="section-title md-8 xl:mb-16 text-center mx-auto">
           About me
         </h2>
-        <div>
-          <div>
-            <DevImg containerStyles="bg_about_shape_light" />
+        <div className="flex flex-col xl:flex-row">
+          <div className="hidden xl:flex flex-1 relative">
+            <DevImg
+              containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative"
+              imgSrc="/assets/about/developer.png"
+            />
+          </div>
+          <div className="flex-1">
+            <Tabs defaultValue="personal">
+              <TabsList>
+                <TabsTrigger value="personal">Personal Info</TabsTrigger>
+                <TabsTrigger value="qualifications">Qualifications</TabsTrigger>
+                <TabsTrigger value="skills">Skills</TabsTrigger>
+              </TabsList>
+              <div className="text-lg mt-12 xl:mt-8">
+                <TabsContent value="personal">personal info</TabsContent>
+                <TabsContent value="qualifications">
+                  qualifications info{" "}
+                </TabsContent>
+                <TabsContent value="skills">skills info</TabsContent>
+              </div>
+            </Tabs>
           </div>
         </div>
       </div>
