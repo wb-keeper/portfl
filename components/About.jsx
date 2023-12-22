@@ -134,15 +134,33 @@ function About() {
           </div>
           <div className="flex-1">
             <Tabs defaultValue="personal">
-              <TabsList>
-                <TabsTrigger value="personal">Personal Info</TabsTrigger>
-                <TabsTrigger value="qualifications">Qualifications</TabsTrigger>
-                <TabsTrigger value="skills">Skills</TabsTrigger>
+              <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none mt-16 xl:mt-0">
+                <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
+                  Personal
+                </TabsTrigger>
+                <TabsTrigger
+                  className="w-[162px] xl:w-auto"
+                  value="qualifications"
+                >
+                  Qualifications
+                </TabsTrigger>
+                <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
+                  Skills
+                </TabsTrigger>
               </TabsList>
               <div className="text-lg mt-12 xl:mt-8">
-                <TabsContent value="personal">personal info</TabsContent>
+                <TabsContent value="personal">
+                  <div>
+                    <h3>Unmached Service Quality for Over 10 Years</h3>
+                    <p>
+                      I specialize in crafting intuitive websites with
+                      cutting-edge technology, delivering dynamic and engaging
+                      user experience.
+                    </p>
+                  </div>
+                </TabsContent>
                 <TabsContent value="qualifications">
-                  qualifications info{" "}
+                  qualifications info
                 </TabsContent>
                 <TabsContent value="skills">skills info</TabsContent>
               </div>
