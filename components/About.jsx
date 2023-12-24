@@ -150,9 +150,11 @@ function About() {
               </TabsList>
               <div className="text-lg mt-12 xl:mt-8">
                 <TabsContent value="personal">
-                  <div>
-                    <h3>Unmached Service Quality for Over 10 Years</h3>
-                    <p>
+                  <div className="text-center xl:text-left">
+                    <h3 className="h3 mb-4">
+                      Unmatched Service Quality for Over 10 Years
+                    </h3>
+                    <p className="subtitle max-w-xl max-auto xl:mx-0">
                       I specialize in crafting intuitive websites with
                       cutting-edge technology, delivering dynamic and engaging
                       user experience.
