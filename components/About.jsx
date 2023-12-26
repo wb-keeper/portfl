@@ -194,7 +194,16 @@ function About() {
                             {getData(qualificationData, "experience").title}
                           </h4>
                         </div>
+                        <div>
+                          {getData(qualificationData, "experience").data.map(
+                            (item, index) => {
+                              const { company, role, years } = item;
+                              return <div key={index}></div>;
+                            },
+                          )}
+                        </div>
                       </div>
+
                       <div>education</div>
                     </div>
                   </div>
