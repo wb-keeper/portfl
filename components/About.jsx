@@ -63,17 +63,17 @@ const qualificationData = [
     data: [
       {
         company: "ABC Inc.",
-        qualification: "Software Engineer",
+        role: "Software Engineer",
         years: "2018 - 2020",
       },
       {
         company: "XYZ corporation",
-        qualification: "Senior Developer",
+        role: "Senior Developer",
         years: "2020 - 2022",
       },
       {
         company: "Tech Innovators",
-        qualification: "Lead Developer",
+        role: "Lead Developer",
         years: "2022 - Present",
       },
     ],
@@ -194,11 +194,31 @@ function About() {
                             {getData(qualificationData, "experience").title}
                           </h4>
                         </div>
-                        <div>
+                        <div className="flex flex-col gap-y-8">
                           {getData(qualificationData, "experience").data.map(
                             (item, index) => {
                               const { company, role, years } = item;
-                              return <div key={index}></div>;
+                              return (
+                                <div
+                                  className="flex gap-x-8 group bg-yellow-200"
+                                  key={index}
+                                >
+                                  <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                                    <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                  </div>
+                                  <div>
+                                    <div className="font-semibold text-xl leading-none mb-2">
+                                      {company}
+                                    </div>
+                                    <div className="text-lg leading-none text-muted-foreground mb-4">
+                                      {role}
+                                    </div>
+                                    <div className="text-base font-medium">
+                                      {years}
+                                    </div>
+                                  </div>
+                                </div>
+                              );
                             },
                           )}
                         </div>
