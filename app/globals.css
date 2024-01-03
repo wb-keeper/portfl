@@ -82,3 +82,6 @@
 .h4 {
   @apply text-[22px] font-semibold
 }
+.swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet, .section-pagination-horizontal .swiper-pagination-bullets .swiper-pagination-bullet {
+  @apply bg-primary;
+}
