@@ -71,8 +71,9 @@ function Reviews(props) {
             },
             1400: { slidesPerView: 3 },
           }}
-          className="bg-pink-100 h-[350px]"
+          className="h-[350px]"
           modules={[Pagination]}
+          spaceBetween={30}
           pagination={{ clickable: true }}
         >
           {reviewsData.map((person, index) => {
