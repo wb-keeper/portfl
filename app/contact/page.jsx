@@ -1,4 +1,4 @@
-import { MailIcon } from "lucide-react";
+import { HomeIcon, MailIcon, PhoneCall } from "lucide-react";
 
 function Contact(props) {
   return (
@@ -18,13 +18,22 @@ function Contact(props) {
           </div>
           <div className="hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat"></div>
         </div>
-        <div>
-          <div>
+        <div className="grid xl:grid-cols-2 mb-24 xl:mb-32">
+          <div className="flex flex-col gap-y-4 xl:gap-x-14 mb-12 xl:mb-24 text-base xl:text-lg">
             <div className="flex items-center gap-x-8">
               <MailIcon size={18} className="text-primary" />
               <div>yourmail@gmail.com</div>
             </div>
+            <div className="flex items-center gap-x-8">
+              <HomeIcon size={18} className="text-primary" />
+              <div>8420 Pine Avenue, Meadowvill MC 842</div>
+            </div>
+            <div className="flex items-center gap-x-8">
+              <PhoneCall size={18} className="text-primary" />
+              <div>+33 444 555 6666</div>
+            </div>
           </div>
+          <form action="">form</form>
         </div>
       </div>
     </section>
