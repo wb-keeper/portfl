@@ -1,4 +1,5 @@
 import { HomeIcon, MailIcon, PhoneCall } from "lucide-react";
+import Form from "@/components/Form";
 
 function Contact(props) {
   return (
@@ -33,7 +34,7 @@ function Contact(props) {
               <div>+33 444 555 6666</div>
             </div>
           </div>
-          <form action="">form</form>
+          <Form />
         </div>
       </div>
     </section>
